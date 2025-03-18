@@ -1,0 +1,47 @@
+{
+  "name": "@zezosoft/zezo-ott-sdk",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c --bundleConfigAsCjs",
+    "dev": "rollup -c -w --bundleConfigAsCjs",
+    "watch": "nodemon -e js,ts,tsx,css --exec 'yalc push'",
+    "prepare": "npm run build"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zezo-Soft/zezo-ott-sdk.git"
+  },
+  "keywords": [
+    "OTT",
+    "ZezoOTT",
+    "Zezo",
+    "Zezosoft",
+    "streaming"
+  ],
+  "author": "Pukhraj Dhamu",
+  "license": "MIT",
+  "description": "ZezoOTT SDK",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^12.1.2",
+    "axios": "^1.8.3",
+    "rollup": "^4.36.0",
+    "rollup-plugin-dts": "^6.1.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-preserve-directives": "^1.1.3",
+    "tslib": "^2.8.1"
+  },
+  "peerDependencies": {
+    "axios": "^1.8.3"
+  }
+}
