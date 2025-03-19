@@ -7,6 +7,11 @@ class SettingsService extends BaseService {
     super(options);
   }
 
+  /**
+   * Fetches the website settings.
+   *
+   * @returns The website settings.
+   */
   async getSettings(): Promise<IWebsiteSetting> {
     return this.request({
       method: "GET",
