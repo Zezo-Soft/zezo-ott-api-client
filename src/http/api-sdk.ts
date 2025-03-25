@@ -1,5 +1,13 @@
+import AnalyticsService from "./services/analytics/analytics";
+import AuthMethodsService from "./services/auth.methods/auth.methods";
 import AuthService from "./services/auth/auth";
+import BlogService from "./services/blog/blog";
+import CategoriesService from "./services/categories/categories";
+import ContentService from "./services/content/content";
+import FavoriteService from "./services/favorite/favorite";
+import PaymentService from "./services/payments/payments";
 import SettingsService from "./services/settings/settings";
+import SubscriptionService from "./services/subscription/subscription";
 
 export interface IOptions {
   baseUrl: string;
@@ -7,8 +15,16 @@ export interface IOptions {
 }
 
 export class ZezoOTT {
-  authService: AuthService;
-  settingsService: SettingsService;
+  auth: AuthService;
+  settings: SettingsService;
+  analytics: AnalyticsService;
+  authMethods: AuthMethodsService;
+  blogs: BlogService;
+  categories: CategoriesService;
+  contents: ContentService;
+  favorites: FavoriteService;
+  payments: PaymentService;
+  subscriptions: SubscriptionService;
 
   /**
    * Constructor for ZezoOTT class.
@@ -16,7 +32,15 @@ export class ZezoOTT {
    * a flag to indicate whether to send credentials with requests.
    */
   constructor(options: IOptions) {
-    this.authService = new AuthService(options);
-    this.settingsService = new SettingsService(options);
+    this.auth = new AuthService(options);
+    this.settings = new SettingsService(options);
+    this.analytics = new AnalyticsService(options);
+    this.authMethods = new AuthMethodsService(options);
+    this.blogs = new BlogService(options);
+    this.categories = new CategoriesService(options);
+    this.contents = new ContentService(options);
+    this.favorites = new FavoriteService(options);
+    this.payments = new PaymentService(options);
+    this.subscriptions = new SubscriptionService(options);
   }
 }
