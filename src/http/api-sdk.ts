@@ -15,15 +15,15 @@ export interface IOptions {
 }
 
 export class ZezoOTT {
-  auth: AuthService;
-  settings: SettingsService;
   analytics: AnalyticsService;
+  auth: AuthService;
   authMethods: AuthMethodsService;
   blogs: BlogService;
   categories: CategoriesService;
   contents: ContentService;
   favorites: FavoriteService;
   payments: PaymentService;
+  settings: SettingsService;
   subscriptions: SubscriptionService;
 
   /**
@@ -32,15 +32,15 @@ export class ZezoOTT {
    * a flag to indicate whether to send credentials with requests.
    */
   constructor(options: IOptions) {
-    this.auth = new AuthService(options);
-    this.settings = new SettingsService(options);
     this.analytics = new AnalyticsService(options);
+    this.auth = new AuthService(options);
     this.authMethods = new AuthMethodsService(options);
     this.blogs = new BlogService(options);
     this.categories = new CategoriesService(options);
     this.contents = new ContentService(options);
     this.favorites = new FavoriteService(options);
     this.payments = new PaymentService(options);
+    this.settings = new SettingsService(options);
     this.subscriptions = new SubscriptionService(options);
   }
 }

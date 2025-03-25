@@ -1,6 +1,6 @@
 {
   "name": "@zezosoft/zezo-ott-api-client",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -16,18 +16,27 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Zezo-Soft/zezo-ott-sdk.git"
+    "url": "git+https://github.com/Zezo-Soft/zezo-ott-api-client.git"
   },
   "keywords": [
     "OTT",
     "ZezoOTT",
     "Zezo",
     "Zezosoft",
-    "streaming"
+    "streaming",
+    "OTT API",
+    "video streaming",
+    "TypeScript SDK",
+    "Node.js API client",
+    "Zezo OTT integration",
+    "video management",
+    "streaming API",
+    "Zezo OTT SDK",
+    "media platform"
   ],
   "author": "Pukhraj Dhamu",
   "license": "MIT",
-  "description": "ZezoOTT SDK",
+  "description": "The official TypeScript SDK for Zezo OTT API. Easily integrate Zezo OTT into your applications with a powerful, developer-friendly package for video streaming, authentication, payments, and more.",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^28.0.3",
     "@rollup/plugin-json": "^6.1.0",
