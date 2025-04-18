@@ -76,7 +76,7 @@ declare type IGetSettingsKeys =
   | "transcoder"
   | "basic_settings";
 
-declare interface IWebSetting {
+export interface IWebSetting {
   _id: string;
   name: string;
   admin_title: string;

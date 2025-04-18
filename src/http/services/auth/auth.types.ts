@@ -1,6 +1,12 @@
 export interface ISendOTPPayload {
   phone: string;
+  countryCode?: string;
   re_captcha_token?: string;
+}
+
+export interface ISendOTPResponse {
+  hash: string;
+  phone: string;
 }
 
 export interface ILoginPayload {

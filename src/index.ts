@@ -11,3 +11,4 @@ export * from "./http/services/favorite/favorite.types";
 export * from "./http/services/payments/payments.types";
 export * from "./http/services/settings/settings.types";
 export * from "./http/services/subscription/subscription.types";
+export * from "./http/services/sections/sections.types";

@@ -1,3 +1,4 @@
+import { AxiosResponse } from "axios";
 import { IOptions } from "../../api-sdk";
 import BaseService from "../baseService";
 import {
@@ -6,6 +7,7 @@ import {
   IRemoveSessionPayload,
   IResetPasswordPayload,
   ISendOTPPayload,
+  ISendOTPResponse,
   ISignUpPayload,
   IVerifyOtpPayload,
   IWhoami,
@@ -21,7 +23,9 @@ class AuthService extends BaseService {
    * @param payload phone and optional recaptcha token
    * @returns response from the server
    */
-  async sendOTP(payload: ISendOTPPayload) {
+  async sendOTP(
+    payload: ISendOTPPayload
+  ): Promise<AxiosResponse<ISendOTPResponse>> {
     return this.request({
       method: "POST",
       url: "/auth/login?provider=phone",
@@ -102,10 +106,11 @@ class AuthService extends BaseService {
    *
    * @returns An object containing the user's details such as id, name, email, role, and subscription information.
    */
-  async whoamI(): Promise<{ data: IWhoami }> {
+  async whoamI(headers?: Record<string, string>): Promise<{ data: IWhoami }> {
     return this.request({
       method: "GET",
       url: "/auth/whoami",
+      headers,
     });
   }
 
@@ -113,10 +118,11 @@ class AuthService extends BaseService {
    * Logs out the user
    * @returns response from the server
    */
-  async logout() {
+  async logout(headers?: Record<string, string>) {
     return this.request({
       method: "POST",
       url: "/auth/logout",
+      headers,
     });
   }
 

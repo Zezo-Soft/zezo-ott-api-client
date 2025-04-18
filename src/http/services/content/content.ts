@@ -58,7 +58,7 @@ class ContentService extends BaseService {
    * @param queryString the query string
    * @returns a promise that resolves to the server's response containing the list of content available for rent or buy
    */
-  async getTvod(queryString?: string): Promise<ITvod> {
+  async getTvod(queryString?: string): Promise<AxiosResponse<ITvod>> {
     return this.request({
       method: "GET",
       url: `/service/content/tvod${queryString || ""}`,

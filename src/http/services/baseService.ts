@@ -17,8 +17,7 @@ class BaseService {
 
   protected async request(config: AxiosRequestConfig) {
     try {
-      const response = await this.client.request(config);
-      return response.data;
+      return await this.client.request(config);
     } catch (error) {
       throw error;
     }

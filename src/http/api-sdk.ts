@@ -6,6 +6,7 @@ import CategoriesService from "./services/categories/categories";
 import ContentService from "./services/content/content";
 import FavoriteService from "./services/favorite/favorite";
 import PaymentService from "./services/payments/payments";
+import SectionsService from "./services/sections/sections";
 import SettingsService from "./services/settings/settings";
 import SubscriptionService from "./services/subscription/subscription";
 
@@ -25,6 +26,7 @@ export class ZezoOTT {
   payments: PaymentService;
   settings: SettingsService;
   subscriptions: SubscriptionService;
+  sections: SectionsService;
 
   /**
    * Constructor for ZezoOTT class.
@@ -42,5 +44,6 @@ export class ZezoOTT {
     this.payments = new PaymentService(options);
     this.settings = new SettingsService(options);
     this.subscriptions = new SubscriptionService(options);
+    this.sections = new SectionsService(options);
   }
 }
