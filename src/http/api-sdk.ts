@@ -9,6 +9,7 @@ import PaymentService from "./services/payments/payments";
 import SectionsService from "./services/sections/sections";
 import SettingsService from "./services/settings/settings";
 import SubscriptionService from "./services/subscription/subscription";
+import CountriesService from "./services/countries/countries";
 
 export interface IOptions {
   baseUrl: string;
@@ -27,6 +28,7 @@ export class ZezoOTT {
   settings: SettingsService;
   subscriptions: SubscriptionService;
   sections: SectionsService;
+  countries: CountriesService;
 
   /**
    * Constructor for ZezoOTT class.
@@ -45,5 +47,6 @@ export class ZezoOTT {
     this.settings = new SettingsService(options);
     this.subscriptions = new SubscriptionService(options);
     this.sections = new SectionsService(options);
+    this.countries = new CountriesService(options);
   }
 }

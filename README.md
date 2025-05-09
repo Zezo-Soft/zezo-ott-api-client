@@ -93,6 +93,10 @@ main();
 
    1. [get](doc/subscriptions.md#get)
 
+1. [Sections](doc/sections.md#Sections)
+
+   1. [get](doc/sections.md#get)
+
 ## Contributors
 
 <a href="https://github.com/PukhrajDhamu" target="_blank">
