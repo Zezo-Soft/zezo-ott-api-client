@@ -179,3 +179,8 @@ export interface ITvod {
     };
   };
 }
+
+export interface IUpdateContentGeoPayload {
+  content_id: string;
+  countries: string[];
+}

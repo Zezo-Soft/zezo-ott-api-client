@@ -70,3 +70,18 @@ try {
   console.log(error);
 }
 ```
+
+## updateGeoLocation
+
+```javascript
+try {
+  const payload = {
+    content_id: "id",
+    countries: ["IN", "US"],
+  };
+  const response = await zott.contents.updateGeoLocation(payload);
+  console.log(response);
+} catch (error) {
+  console.log(error);
+}
+```

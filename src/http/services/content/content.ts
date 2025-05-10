@@ -1,7 +1,12 @@
 import { AxiosResponse } from "axios";
 import { IOptions } from "../../api-sdk";
 import BaseService from "../baseService";
-import { IContent, IContentSeasons, ITvod } from "./content.types";
+import {
+  IContent,
+  IContentSeasons,
+  ITvod,
+  IUpdateContentGeoPayload,
+} from "./content.types";
 
 class ContentService extends BaseService {
   constructor(options: IOptions) {
@@ -62,6 +67,20 @@ class ContentService extends BaseService {
     return this.request({
       method: "GET",
       url: `/service/content/tvod${queryString || ""}`,
+    });
+  }
+
+  /**
+   * Updates the geo location for a content.
+   *
+   * @param payload the update geo location payload
+   * @returns a promise that resolves to the server's response
+   */
+  async updateGeoLocation(payload: IUpdateContentGeoPayload) {
+    return this.request({
+      method: "PATCH",
+      url: "/api/v1/content/geo",
+      data: payload,
     });
   }
 }

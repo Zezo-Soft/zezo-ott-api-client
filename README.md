@@ -73,6 +73,7 @@ main();
    1. [getSeasons](doc/content.md#getSeasons)
    1. [getIsContentBuyedOrRented](doc/content.md#getIsContentBuyedOrRented)
    1. [getTvod](doc/content.md#getTvod)
+   1. [updateGeoLocation](doc/content.md#updateGeoLocation)
 
 1. [Favorite](doc/favorite.md#Favorites)
 
@@ -96,6 +97,13 @@ main();
 1. [Sections](doc/sections.md#Sections)
 
    1. [get](doc/sections.md#get)
+
+1. [Countries](doc/countries.md#Countries)
+
+   1. [init](doc/countries.md#init)
+   1. [create](doc/countries.md#create)
+   1. [get](doc/countries.md#get)
+   1. [delete](doc/countries.md#delete)
 
 ## Contributors
 

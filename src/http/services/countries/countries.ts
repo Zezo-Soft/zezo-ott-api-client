@@ -1,7 +1,7 @@
 import { AxiosResponse } from "axios";
 import { IOptions } from "../../api-sdk";
 import BaseService from "../baseService";
-import { ICountries } from "./countries.types";
+import { ICountries, ICreateCountryPayload } from "./countries.types";
 
 class CountriesService extends BaseService {
   constructor(options: IOptions) {
@@ -41,6 +41,33 @@ class CountriesService extends BaseService {
       data: {
         id: ids,
       },
+    });
+  }
+
+  /**
+   * Creates a new country.
+   *
+   * @param payload The country data to send to the server.
+   * @returns A promise that resolves to the server's response.
+   */
+  async create(payload: ICreateCountryPayload) {
+    return this.request({
+      method: "POST",
+      url: "api/v1/countries",
+      data: payload,
+    });
+  }
+
+  /**
+   * Initializes the country setup by making an automatic configuration request.
+   *
+   * @returns A promise that resolves to the server's response.
+   */
+
+  async init() {
+    return this.request({
+      method: "POST",
+      url: "api/v1/countries/auto-setup",
     });
   }
 }

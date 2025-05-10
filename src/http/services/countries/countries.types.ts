@@ -27,3 +27,9 @@ export interface ICountries {
   data: ICountry[];
   meta: ICountryMeta;
 }
+
+export interface ICreateCountryPayload {
+  name: string;
+  country_code: string;
+  phone_code: string;
+}
