@@ -10,7 +10,7 @@ try {
     format: "csv",
     select: "name,email,phone,role,status,createdAt,updatedAt", // this is available on future versions
   };
-  const response = await zott.users.export();
+  const response = await zott.users.export(query);
   console.log(response);
 } catch (error) {
   console.log(error);

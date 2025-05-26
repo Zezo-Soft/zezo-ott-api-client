@@ -24,7 +24,7 @@ class ConfigService extends BaseService {
   async create(payload: ICreateConfigPayload): Promise<AxiosResponse<any>> {
     return this.request({
       method: "POST",
-      url: "api/v1/config",
+      url: "/api/v1/config",
       data: payload,
     });
   }
