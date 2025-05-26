@@ -38,7 +38,7 @@ class ConfigService extends BaseService {
   async update(payload: IUpdateConfigPayload): Promise<AxiosResponse<any>> {
     return this.request({
       method: "PATCH",
-      url: "api/v1/config",
+      url: "/api/v1/config",
       data: payload,
     });
   }
@@ -52,7 +52,7 @@ class ConfigService extends BaseService {
   async delete(payload: IDeleteConfigPayload): Promise<AxiosResponse<any>> {
     return this.request({
       method: "DELETE",
-      url: "api/v1/config",
+      url: "/api/v1/config",
       data: payload,
     });
   }
@@ -66,7 +66,7 @@ class ConfigService extends BaseService {
   async get(query: IGetConfigPayload): Promise<AxiosResponse<IConfigData[]>> {
     return this.request({
       method: "GET",
-      url: `api/v1/config?${qs.stringify(query)}`,
+      url: `/api/v1/config?${qs.stringify(query)}`,
     });
   }
 }
