@@ -13,3 +13,5 @@ export * from "./http/services/settings/settings.types";
 export * from "./http/services/subscription/subscription.types";
 export * from "./http/services/sections/sections.types";
 export * from "./http/services/countries/countries.types";
+export * from "./http/services/user/user.types";
+export * from "./http/services/config/config.types";

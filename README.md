@@ -105,6 +105,17 @@ main();
    1. [get](doc/countries.md#get)
    1. [delete](doc/countries.md#delete)
 
+1. [Users](doc/user.md#Users)
+
+   1. [export](doc/user.md#export)
+
+1. [Config](doc/config.md#Config)
+
+   1. [create](doc/config.md#create)
+   1. [get](doc/config.md#get)
+   1. [update](doc/config.md#update)
+   1. [delete](doc/config.md#delete)
+
 ## Contributors
 
 <a href="https://github.com/PukhrajDhamu" target="_blank">
