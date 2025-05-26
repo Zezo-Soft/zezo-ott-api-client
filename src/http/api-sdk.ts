@@ -10,10 +10,20 @@ import SectionsService from "./services/sections/sections";
 import SettingsService from "./services/settings/settings";
 import SubscriptionService from "./services/subscription/subscription";
 import CountriesService from "./services/countries/countries";
+import UserService from "./services/user/user";
+import { AxiosRequestConfig } from "axios";
+import ConfigService from "./services/config/config";
 
 export interface IOptions {
   baseUrl: string;
   withCredentials?: boolean;
+  interceptors?: {
+    request?: (
+      config: AxiosRequestConfig
+    ) => AxiosRequestConfig | Promise<AxiosRequestConfig>;
+    response?: (response: any) => any;
+    responseError?: (error: any) => any;
+  };
 }
 
 export class ZezoOTT {
@@ -29,6 +39,8 @@ export class ZezoOTT {
   subscriptions: SubscriptionService;
   sections: SectionsService;
   countries: CountriesService;
+  users: UserService;
+  config: ConfigService;
 
   /**
    * Constructor for ZezoOTT class.
@@ -48,5 +60,7 @@ export class ZezoOTT {
     this.subscriptions = new SubscriptionService(options);
     this.sections = new SectionsService(options);
     this.countries = new CountriesService(options);
+    this.users = new UserService(options);
+    this.config = new ConfigService(options);
   }
 }
