@@ -32,3 +32,63 @@ try {
   console.log(error);
 }
 ```
+
+## readLatestContentAnalytics
+
+```javascript
+try {
+  const query = {
+    timePeriod: "today",
+    startDate: "2022-01-01",
+    endDate: "2022-01-01",
+    content_id: "id",
+  };
+  const response = await zott.analytics.readLatestContentAnalytics(query);
+  console.log(response);
+} catch (error) {
+  console.log(error);
+}
+```
+
+## readUsersAnalytics
+
+```javascript
+try {
+  const query = {
+    timePeriod: "today",
+    startDate: "2022-01-01",
+    endDate: "2022-01-01",
+  };
+  const response = await zott.analytics.readUsersAnalytics(query);
+  console.log(response);
+} catch (error) {
+  console.log(error);
+}
+```
+
+## readContentReportAnalytics
+
+```javascript
+try {
+  const response = await zott.analytics.readContentReportAnalytics();
+  console.log(response);
+} catch (error) {
+  console.log(error);
+}
+```
+
+## readRevenueAnalytics
+
+```javascript
+try {
+  const query = {
+    timePeriod: "today",
+    startDate: "2022-01-01",
+    endDate: "2022-01-01",
+  };
+  const response = await zott.analytics.readRevenueAnalytics(query);
+  console.log(response);
+} catch (error) {
+  console.log(error);
+}
+```

@@ -16,3 +16,18 @@ try {
   console.log(error);
 }
 ```
+
+## get
+
+```javascript
+try {
+  const query = {
+    page: 1,
+    limit: 10,
+  };
+  const response = await zott.users.get(query);
+  console.log(response);
+} catch (error) {
+  console.log(error);
+}
+```

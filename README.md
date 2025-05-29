@@ -42,6 +42,10 @@ main();
 
    1. [countView](doc/analytics.md#countView)
    1. [countWatchTime](doc/analytics.md#countWatchTime)
+   1. [readLatestContentAnalytics](doc/analytics.md#readLatestContentAnalytics)
+   1. [readUsersAnalytics](doc/analytics.md#readUsersAnalytics)
+   1. [readContentReportAnalytics](doc/analytics.md#readContentReportAnalytics)
+   1. [readRevenueAnalytics](doc/analytics.md#readRevenueAnalytics)
 
 1. [Auth](doc/auth.md#Auth)
 
@@ -108,6 +112,7 @@ main();
 1. [Users](doc/user.md#Users)
 
    1. [export](doc/user.md#export)
+   1. [get](doc/user.md#get)
 
 1. [Config](doc/config.md#Config)
 

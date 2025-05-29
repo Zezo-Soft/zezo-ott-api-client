@@ -1,8 +1,13 @@
 import { AxiosResponse } from "axios";
 import { IOptions } from "../../api-sdk";
 import BaseService from "../baseService";
-import { IUserExportQueryPayload } from "./user.types";
+import {
+  IUserExportQueryPayload,
+  IUserQueryPayload,
+  IUserResponse,
+} from "./user.types";
 import qs from "qs";
+import { filterNonNull } from "../../../utils";
 
 class UserService extends BaseService {
   constructor(options: IOptions) {
@@ -30,6 +35,34 @@ class UserService extends BaseService {
     return this.request({
       method: "GET",
       url: "/api/v1/users/export",
+    });
+  }
+
+  /**
+   * Retrieves a list of users.
+   *
+   * @param query An object of query parameters to filter the results.
+   * The available query parameters are:
+   * - `page`: The page number to retrieve.
+   * - `limit`: The number of items to retrieve per page.
+   * - `order`: The order to sort the results by. The available values are `asc` and `desc`.
+   * - `fields`: An array of column names to include in the results.
+   * - `q`: A search query to filter the results by.
+   * - `filters`: An object of filter values to filter the results by.
+   * - `populate`: An array of populate options to include associated data in the results.
+   * - `id`: A user ID to retrieve a single user.
+   * @returns A promise that resolves to the server's response containing the list of users.
+   */
+  async get(query?: IUserQueryPayload): Promise<AxiosResponse<IUserResponse>> {
+    if (query) {
+      return this.request({
+        method: "GET",
+        url: `api/v1/users?${qs.stringify(filterNonNull(query))}`,
+      });
+    }
+    return this.request({
+      method: "GET",
+      url: "api/v1/users",
     });
   }
 }

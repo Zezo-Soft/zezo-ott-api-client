@@ -30,3 +30,74 @@ export interface IWatchTimeCount {
   time: number;
   platform: "web";
 }
+
+export type TTimePeriod =
+  | "today"
+  | "last_24_hours"
+  | "last_3_days"
+  | "last_7_days"
+  | "last_14_days"
+  | "last_30_days"
+  | "last_60_days"
+  | "this_week"
+  | "this_month"
+  | "this_year"
+  | "all_time"
+  | "custom";
+
+export interface IReadLatestContentAnalyticsQueryPayload {
+  timePeriod?: TTimePeriod;
+  startDate?: string;
+  endDate?: string;
+  content_id?: string;
+}
+
+export interface IReadLatestContentAnalyticsResponse {
+  views: {
+    _id: string;
+    count: number;
+  }[];
+  watchTime: {
+    _id: string;
+    time: number;
+  }[];
+}
+
+export interface IReadUsersAnalyticsQueryPayload {
+  timePeriod?: TTimePeriod;
+  startDate?: string;
+  endDate?: string;
+}
+
+export interface IReadUsersAnalyticsResponse {
+  totalUsers: number;
+  users: { _id: string; count: number }[];
+  subscriber: number;
+}
+
+export interface IReadContentReportAnalyticsResponse {
+  total: number;
+  totalPublic: number;
+  totalPrivate: number;
+}
+
+export interface IReadRevenueAnalyticsQueryPayload {
+  timePeriod?: TTimePeriod;
+  startDate?: string;
+  endDate?: string;
+  revenue_type?: "tvod" | "svod" | "other";
+  tvodId?: string;
+  tvodType?: "rent" | "buy" | "other";
+  status?: "created" | "paid" | "failed" | "attempted";
+}
+
+export interface IReadRevenueAnalyticsResponse {
+  razorpay: number;
+  UPI: number;
+  cashfree: number;
+  subpaisa: number;
+  payumoney: number;
+  stripe: number;
+  ccavenue: number;
+  phonepe: number;
+}

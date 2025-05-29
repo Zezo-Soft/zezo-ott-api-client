@@ -12,6 +12,7 @@ export interface ISendOTPResponse {
 export interface ILoginPayload {
   email: string;
   password: string;
+  check?: boolean;
 }
 
 export interface IVerifyOtpPayload {
@@ -36,7 +37,7 @@ export interface IResetPasswordPayload {
   password: string;
 }
 
-export type IRoles = "user" | "admin" | "partner";
+export type IRoles = "user" | "admin" | "partner" | "manager";
 
 export interface IWhoami {
   id: string;
@@ -45,7 +46,7 @@ export interface IWhoami {
   email: string;
   role: IRoles;
   avatar: string | null;
-  sessions: object[];
+  sessions?: object[];
   isSubscribed: boolean;
   subscription: {
     subscriptionId: string;
@@ -68,6 +69,11 @@ export interface IWhoami {
     active_at: string;
     expiresIn: string;
   } | null;
+  permissions: {
+    permissions: string[];
+    resources: string[];
+    roles: string[];
+  };
 }
 
 export interface IRemoveSessionPayload {
