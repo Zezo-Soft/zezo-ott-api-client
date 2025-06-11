@@ -39,10 +39,14 @@ class ContentService extends BaseService {
    * @param contentId the id of the content to check
    * @returns a boolean indicating if the content has been bought or rented
    */
-  async getIsContentBuyedOrRented(contentId: string): Promise<boolean> {
+  async getIsContentBuyedOrRented(
+    contentId: string,
+    headers?: Record<string, string>
+  ): Promise<boolean> {
     const response = await this.request({
       method: "GET",
       url: `/api/content/buy-or-rent/${contentId}`,
+      headers,
     });
 
     if (response?.data?.status === "valid") {

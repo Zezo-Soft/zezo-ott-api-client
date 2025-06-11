@@ -13,6 +13,7 @@ import SubscriptionService from "./services/subscription/subscription";
 export interface IOptions {
   baseUrl: string;
   withCredentials?: boolean;
+  headers?: Record<string, string>;
 }
 
 export class ZezoOTT {
