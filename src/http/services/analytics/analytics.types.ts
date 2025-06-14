@@ -45,7 +45,7 @@ export type TTimePeriod =
   | "all_time"
   | "custom";
 
-export interface IReadLatestContentAnalyticsQueryPayload {
+export interface IReadContentAnalyticsQueryPayload {
   timePeriod?: TTimePeriod;
   startDate?: string;
   endDate?: string;
@@ -100,4 +100,17 @@ export interface IReadRevenueAnalyticsResponse {
   stripe: number;
   ccavenue: number;
   phonepe: number;
+}
+
+export interface IGetTvodAnalyticsQueryPayload {
+  timePeriod?: TTimePeriod;
+  id?: string;
+  from?: string;
+  to?: string;
+}
+
+export interface IGetTvodAnalyticsResponse {
+  total_bought: number;
+  total_rented: number;
+  date: string;
 }

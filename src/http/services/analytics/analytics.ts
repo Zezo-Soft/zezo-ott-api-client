@@ -3,7 +3,7 @@ import { IOptions } from "../../api-sdk";
 import BaseService from "../baseService";
 import {
   IReadContentReportAnalyticsResponse,
-  IReadLatestContentAnalyticsQueryPayload,
+  IReadContentAnalyticsQueryPayload,
   IReadLatestContentAnalyticsResponse,
   IReadRevenueAnalyticsQueryPayload,
   IReadRevenueAnalyticsResponse,
@@ -11,6 +11,8 @@ import {
   IReadUsersAnalyticsResponse,
   IViewCount,
   IWatchTimeCount,
+  IGetTvodAnalyticsQueryPayload,
+  IGetTvodAnalyticsResponse,
 } from "./analytics.types";
 import qs from "qs";
 
@@ -53,18 +55,18 @@ class AnalyticsService extends BaseService {
    * @param query the query containing the filter options
    * @returns response from the server containing the latest content analytics
    */
-  async readLatestContentAnalytics(
-    query?: IReadLatestContentAnalyticsQueryPayload
+  async readContentAnalytics(
+    query?: IReadContentAnalyticsQueryPayload
   ): Promise<AxiosResponse<IReadLatestContentAnalyticsResponse>> {
     if (query) {
       return this.request({
         method: "GET",
-        url: `/api/v1/analytics/latest-content?${qs.stringify(query)}`,
+        url: `/api/v1/analytics/content?${qs.stringify(query)}`,
       });
     }
     return this.request({
       method: "GET",
-      url: "/api/v1/analytics/latest-content",
+      url: "/api/v1/analytics/content",
     });
   }
 
@@ -121,6 +123,27 @@ class AnalyticsService extends BaseService {
     return this.request({
       method: "GET",
       url: "/api/v1/analytics/revenue-report",
+    });
+  }
+
+  /**
+   * Fetches the TVOD analytics for the given query.
+   *
+   * @param query Optional query parameters to filter the TVOD analytics.
+   * @returns A promise that resolves to the server's response containing the TVOD analytics.
+   */
+  async getTvodAnalytics(
+    query?: IGetTvodAnalyticsQueryPayload
+  ): Promise<AxiosResponse<IGetTvodAnalyticsResponse[]>> {
+    if (query) {
+      return this.request({
+        method: "GET",
+        url: `/api/v1/analytics/tvod/content?${qs.stringify(query)}`,
+      });
+    }
+    return this.request({
+      method: "GET",
+      url: "/api/v1/analytics/tvod/content",
     });
   }
 }

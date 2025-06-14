@@ -33,7 +33,7 @@ try {
 }
 ```
 
-## readLatestContentAnalytics
+## readContentAnalytics
 
 ```javascript
 try {
@@ -43,7 +43,7 @@ try {
     endDate: "2022-01-01",
     content_id: "id",
   };
-  const response = await zott.analytics.readLatestContentAnalytics(query);
+  const response = await zott.analytics.readContentAnalytics(query);
   console.log(response);
 } catch (error) {
   console.log(error);
@@ -87,6 +87,20 @@ try {
     endDate: "2022-01-01",
   };
   const response = await zott.analytics.readRevenueAnalytics(query);
+  console.log(response);
+} catch (error) {
+  console.log(error);
+}
+```
+
+## getTvodAnalytics
+
+```javascript
+try {
+  const query = {
+    timePeriod: "today",
+  };
+  const response = await zott.analytics.getTvodAnalytics(query);
   console.log(response);
 } catch (error) {
   console.log(error);

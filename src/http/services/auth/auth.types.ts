@@ -79,3 +79,8 @@ export interface IWhoami {
 export interface IRemoveSessionPayload {
   token_id: string;
 }
+
+export interface IChangePasswordPayload {
+  current_password: string;
+  new_password: string;
+}

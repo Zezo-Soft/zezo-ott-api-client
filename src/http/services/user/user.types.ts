@@ -1,3 +1,4 @@
+import { IPopulate } from "../../../types";
 import { IRoles } from "../auth/auth.types";
 
 export interface IUserExportQueryPayload {
@@ -20,12 +21,6 @@ export interface IUserExportQueryPayload {
    * @example "name,email"
    */
   select?: string;
-}
-
-export interface IPopulate {
-  path: string;
-  select?: string[];
-  populate?: IPopulate[];
 }
 
 export interface IUserQueryPayload {
@@ -112,4 +107,46 @@ export interface IUserResponse {
   hasNextPage: boolean;
   prevPage: null | number;
   nextPage: null | number;
+}
+
+export interface IUsersActionsPayload {
+  id: string[];
+  action: "activate" | "deactivate" | "move_to_trash" | "restore";
+}
+
+export interface IUserCreatePayload {
+  name: string;
+  email: string;
+  password: string;
+  role: "partner" | "manager" | "user";
+}
+
+export interface IUserAvatarUpdatePayload {
+  avatar: File;
+}
+
+export interface IUserUpdatePayload {
+  id: string;
+  name?: string;
+  email?: string;
+  phone?: string;
+  countryCode?: string;
+  role?: "partner" | "manager" | "user";
+}
+
+export interface IRemoveUserSessionPayload {
+  user_id: string;
+  sid?: string;
+  type?: "all" | "single";
+}
+
+export interface IUserACLUpdatePayload {
+  id: string;
+  acl: string[];
+}
+
+export interface IUserSubscriptionUpdatePayload {
+  user_id: string;
+  subscription_id?: string;
+  action: "add" | "remove";
 }
