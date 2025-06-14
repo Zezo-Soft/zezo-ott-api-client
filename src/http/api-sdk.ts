@@ -19,6 +19,7 @@ import ReleasePopupService from "./services/release.popup/release.popup";
 export interface IOptions {
   baseUrl: string;
   withCredentials?: boolean;
+  headers?: Record<string, string>;
   interceptors?: {
     request?: (
       config: AxiosRequestConfig

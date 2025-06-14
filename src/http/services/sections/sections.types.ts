@@ -3,6 +3,7 @@ import { IContentData } from "../content/content.types";
 export interface IGetSectionsQuery {
   page?: number;
   limit?: number;
+  type?: string;
   category?: string;
   fields?: string[];
   content_list?: boolean;
