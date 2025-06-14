@@ -126,3 +126,18 @@ try {
   console.log(error);
 }
 ```
+
+## changePassword
+
+```javascript
+try {
+  const payload = {
+    current_password: "**********",
+    new_password: "**********",
+  };
+  const response = await zott.auth.changePassword(payload);
+  console.log(response);
+} catch (error) {
+  console.log(error);
+}
+```

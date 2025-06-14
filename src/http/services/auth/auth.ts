@@ -2,6 +2,7 @@ import { AxiosResponse } from "axios";
 import { IOptions } from "../../api-sdk";
 import BaseService from "../baseService";
 import {
+  IChangePasswordPayload,
   IForgotPasswordPayload,
   ILoginPayload,
   IRemoveSessionPayload,
@@ -136,6 +137,19 @@ class AuthService extends BaseService {
     return this.request({
       method: "PATCH",
       url: "/auth/self/remove-session",
+      data: payload,
+    });
+  }
+
+  /**
+   * Changes the user's password.
+   * @param payload - An object containing the current password and the new password.
+   * @returns Response from the server indicating the result of the password change.
+   */
+  async changePassword(payload: IChangePasswordPayload) {
+    return this.request({
+      method: "PATCH",
+      url: "/auth/self/change-password",
       data: payload,
     });
   }

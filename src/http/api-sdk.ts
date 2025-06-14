@@ -13,6 +13,8 @@ import CountriesService from "./services/countries/countries";
 import UserService from "./services/user/user";
 import { AxiosRequestConfig } from "axios";
 import ConfigService from "./services/config/config";
+import UpgradeService from "./services/upgrade/upgrade";
+import ReleasePopupService from "./services/release.popup/release.popup";
 
 export interface IOptions {
   baseUrl: string;
@@ -41,6 +43,8 @@ export class ZezoOTT {
   countries: CountriesService;
   users: UserService;
   config: ConfigService;
+  upgrade: UpgradeService;
+  releasePopup: ReleasePopupService;
 
   /**
    * Constructor for ZezoOTT class.
@@ -62,5 +66,7 @@ export class ZezoOTT {
     this.countries = new CountriesService(options);
     this.users = new UserService(options);
     this.config = new ConfigService(options);
+    this.upgrade = new UpgradeService(options);
+    this.releasePopup = new ReleasePopupService(options);
   }
 }
