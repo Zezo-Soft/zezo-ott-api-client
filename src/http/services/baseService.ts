@@ -17,6 +17,21 @@ class BaseService {
         ...(options.headers || {}),
       },
     });
+
+    // Attach user-provided interceptors
+    if (options.interceptors?.request) {
+      this.client.interceptors.request.use(
+        (config) =>
+          options.interceptors!.request!(config as AxiosRequestConfig) as any
+      );
+    }
+
+    if (options.interceptors?.response || options.interceptors?.responseError) {
+      this.client.interceptors.response.use(
+        options.interceptors.response || ((r) => r),
+        options.interceptors.responseError || ((e) => Promise.reject(e))
+      );
+    }
   }
 
   protected async request(config: AxiosRequestConfig) {
