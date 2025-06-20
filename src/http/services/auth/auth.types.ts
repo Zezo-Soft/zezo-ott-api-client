@@ -9,6 +9,21 @@ export interface ISendOTPResponse {
   phone: string;
 }
 
+export interface ISignUpPayload {
+  name: string;
+  email: string;
+  password: string;
+}
+
+export interface ISignUpResponse {
+  token: string;
+  user: {
+    id: string;
+    email: string;
+    name: string;
+  };
+}
+
 export interface ILoginPayload {
   email: string;
   password: string;
