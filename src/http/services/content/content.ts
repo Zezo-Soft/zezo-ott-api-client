@@ -387,6 +387,14 @@ class ContentService extends BaseService {
     });
   }
 
+  async searchContent(query: string): Promise<AxiosResponse<IContent[]>> {
+    return this.request({
+      method: "GET",
+      url: "/api/search",
+      params: { query },
+    });
+  }
+
   /**
    * Deletes an image for a given content.
    *

@@ -19,6 +19,12 @@ export interface ISubtitles {
   type: "application/x-subrip" | "application/ttml+xml" | "text/vtt";
   url: string;
 }
+export interface IContent {
+  id: string;
+  title: string;
+  posterUrl: string;
+  type: "movie" | "series" | "music";
+}
 
 export interface IContentEpisodes {
   _id: string;
@@ -102,6 +108,7 @@ export interface IContentData {
   slug: string;
   u_age: string;
   description: string;
+  data: string;
   duration: string;
   rating: number;
   source_link: string | null;
