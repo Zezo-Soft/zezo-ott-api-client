@@ -15,6 +15,7 @@ import { AxiosRequestConfig } from "axios";
 import ConfigService from "./services/config/config";
 import UpgradeService from "./services/upgrade/upgrade";
 import ReleasePopupService from "./services/release.popup/release.popup";
+import ApiKeyService from "./services/api.key/api.key";
 
 export interface IOptions {
   baseUrl: string;
@@ -46,6 +47,7 @@ export class ZezoOTT {
   config: ConfigService;
   upgrade: UpgradeService;
   releasePopup: ReleasePopupService;
+  apiKeys: ApiKeyService;
 
   /**
    * Constructor for ZezoOTT class.
@@ -69,5 +71,6 @@ export class ZezoOTT {
     this.config = new ConfigService(options);
     this.upgrade = new UpgradeService(options);
     this.releasePopup = new ReleasePopupService(options);
+    this.apiKeys = new ApiKeyService(options);
   }
 }

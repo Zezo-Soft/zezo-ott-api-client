@@ -120,6 +120,16 @@ main();
 
 1. [Sections](doc/sections.md#Sections)
 
+   1. [create](doc/sections.md#create)
+   1. [getManage](doc/sections.md#getManage)
+   1. [deleteSection](doc/sections.md#deleteSection)
+   1. [updateStatus](doc/sections.md#updateStatus)
+   1. [updateOrder](doc/sections.md#updateOrder)
+   1. [update](doc/sections.md#update)
+   1. [createSectionStyle](doc/sections.md#createSectionStyle)
+   1. [updateSectionStyle](doc/sections.md#updateSectionStyle)
+   1. [deleteSectionStyle](doc/sections.md#deleteSectionStyle)
+   1. [getSectionStyles](doc/sections.md#getSectionStyles)
    1. [get](doc/sections.md#get)
 
 1. [Countries](doc/countries.md#Countries)
@@ -159,6 +169,13 @@ main();
    1. [update](doc/release.popup.md#update)
    1. [delete](doc/release.popup.md#delete)
    1. [get](doc/release.popup.md#get)
+
+1. [Api Key](doc/api.key.md#ApiKey)
+
+   1. [create](doc/api.key.md#create)
+   1. [list](doc/api.key.md#list)
+   1. [delete](doc/api.key.md#delete)
+   1. [update](doc/api.key.md#update)
 
 ## Contributors
 
