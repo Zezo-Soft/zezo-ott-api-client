@@ -1,3 +1,5 @@
+import { IContentData } from "../content/content.types";
+
 export interface IViewCount {
   content_id: string;
   episode_id: string | null;
@@ -114,3 +116,26 @@ export interface IGetTvodAnalyticsResponse {
   total_rented: number;
   date: string;
 }
+export interface IGetTrendingAnalyticsQuery {
+  timePeriod?: TTimePeriod;
+  basedOn?: "views" | "watch_time" | "revenue";
+  limit?: number;
+}
+
+export interface ITrending
+  extends Pick<
+    IContentData,
+    | "_id"
+    | "name"
+    | "description"
+    | "content_duration"
+    | "thumbnail"
+    | "status"
+    | "views"
+    | "type"
+    | "content_offering_type"
+    | "createdAt"
+    | "created_by"
+    | "watch_time"
+    | "revenue"
+  > {}

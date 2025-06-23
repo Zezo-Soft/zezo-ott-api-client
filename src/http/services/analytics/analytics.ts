@@ -13,6 +13,8 @@ import {
   IWatchTimeCount,
   IGetTvodAnalyticsQueryPayload,
   IGetTvodAnalyticsResponse,
+  IGetTrendingAnalyticsQuery,
+  ITrending,
 } from "./analytics.types";
 import qs from "qs";
 
@@ -144,6 +146,21 @@ class AnalyticsService extends BaseService {
     return this.request({
       method: "GET",
       url: "/api/v1/analytics/tvod/content",
+    });
+  }
+
+  /**
+   * Fetches the trending analytics for the given query.
+   *
+   * @param query Optional query parameters to filter the trending analytics.
+   * @returns A promise that resolves to the server's response containing the trending analytics.
+   */
+  async trending(
+    query?: IGetTrendingAnalyticsQuery
+  ): Promise<AxiosResponse<ITrending[]>> {
+    return this.request({
+      method: "GET",
+      url: `/api/v1/analytics/trending?${qs.stringify(query)}`,
     });
   }
 }

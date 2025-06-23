@@ -47,6 +47,7 @@ main();
    1. [readContentReportAnalytics](doc/analytics.md#readContentReportAnalytics)
    1. [readRevenueAnalytics](doc/analytics.md#readRevenueAnalytics)
    1. [getTvodAnalytics](doc/analytics.md#getTvodAnalytics)
+   1. [trending](doc/analytics.md#trending)
 
 1. [Auth](doc/auth.md#Auth)
 

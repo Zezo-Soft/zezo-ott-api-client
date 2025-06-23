@@ -106,3 +106,17 @@ try {
   console.log(error);
 }
 ```
+
+## trending
+
+```javascript
+try {
+  const query = {
+    timePeriod: "today",
+  };
+  const response = await zott.analytics.trending(query);
+  console.log(response);
+} catch (error) {
+  console.log(error);
+}
+```
