@@ -37,7 +37,7 @@ class ConfigService extends BaseService {
    */
   async update(payload: IUpdateConfigPayload): Promise<AxiosResponse<any>> {
     return this.request({
-      method: "PATCH",
+      method: "PUT",
       url: "/api/v1/config",
       data: payload,
     });

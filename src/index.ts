@@ -17,3 +17,4 @@ export * from "./http/services/user/user.types";
 export * from "./http/services/config/config.types";
 export * from "./http/services/release.popup/release.popup.types";
 export * from "./http/services/api.key/api.key.types";
+export * from "./http/services/file.manager/file.manager.types";
