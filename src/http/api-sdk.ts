@@ -16,6 +16,7 @@ import ConfigService from "./services/config/config";
 import UpgradeService from "./services/upgrade/upgrade";
 import ReleasePopupService from "./services/release.popup/release.popup";
 import ApiKeyService from "./services/api.key/api.key";
+import FileManagerService from "./services/file.manager/file.manager";
 
 export interface IOptions {
   baseUrl: string;
@@ -48,6 +49,7 @@ export class ZezoOTT {
   upgrade: UpgradeService;
   releasePopup: ReleasePopupService;
   apiKeys: ApiKeyService;
+  fileManager: FileManagerService;
 
   /**
    * Constructor for ZezoOTT class.
@@ -72,5 +74,6 @@ export class ZezoOTT {
     this.upgrade = new UpgradeService(options);
     this.releasePopup = new ReleasePopupService(options);
     this.apiKeys = new ApiKeyService(options);
+    this.fileManager = new FileManagerService(options);
   }
 }

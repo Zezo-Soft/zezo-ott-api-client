@@ -178,6 +178,18 @@ main();
    1. [delete](doc/api.key.md#delete)
    1. [update](doc/api.key.md#update)
 
+1. [File Manager](doc/file.manager.md#FileManager)
+
+   1. [list](doc/file.manager.md#list)
+   1. [createFolder](doc/file.manager.md#createFolder)
+   1. [delete](doc/file.manager.md#delete)
+   1. [initMultipartUpload](doc/file.manager.md#initMultipartUpload)
+   1. [getMultipartPresignedUrl](doc/file.manager.md#getMultipartPresignedUrl)
+   1. [finalizeMultipartUpload](doc/file.manager.md#finalizeMultipartUpload)
+   1. [createUploadPresignedUrl](doc/file.manager.md#createUploadPresignedUrl)
+   1. [getSignedUrl](doc/file.manager.md#getSignedUrl)
+   1. [getTranscoderSignUrl](doc/file.manager.md#getTranscoderSignUrl)
+
 ## Contributors
 
 <a href="https://github.com/PukhrajDhamu" target="_blank">
