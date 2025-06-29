@@ -190,10 +190,19 @@ main();
    1. [getSignedUrl](doc/file.manager.md#getSignedUrl)
    1. [getTranscoderSignUrl](doc/file.manager.md#getTranscoderSignUrl)
 
+1. [User Histiry](doc/history.md#History)
+
+   1. [get](doc/history.md#get)
+   1. [update](doc/history.md#update)
+
 ## Contributors
 
 <a href="https://github.com/PukhrajDhamu" target="_blank">
     <img src="https://avatars2.githubusercontent.com/u/74310666?v=3" width="80" height="80">
+</a>
+
+<a href="https://github.com/Naresh-Dhamu" target="_blank">
+    <img src="https://avatars.githubusercontent.com/u/89912059?v=4" width="80" height="80">
 </a>
 
 <a href="https://github.com/naresh-desai" target="_blank">

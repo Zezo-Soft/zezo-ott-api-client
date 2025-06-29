@@ -1,3 +1,10 @@
+#### v0.0.9
+
+#### Added
+
+- Add: User History get.
+- Add: User History update.
+
 #### v0.0.4
 
 #### Added
