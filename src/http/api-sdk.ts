@@ -15,6 +15,7 @@ import { AxiosRequestConfig } from "axios";
 import ConfigService from "./services/config/config";
 import UpgradeService from "./services/upgrade/upgrade";
 import ReleasePopupService from "./services/release.popup/release.popup";
+import { TvodService } from "./services/tvod/TvodService";
 
 export interface IOptions {
   baseUrl: string;
@@ -37,6 +38,7 @@ export class ZezoOTT {
   categories: CategoriesService;
   contents: ContentService;
   favorites: FavoriteService;
+  tvodService: TvodService;
   payments: PaymentService;
   settings: SettingsService;
   subscriptions: SubscriptionService;
@@ -69,5 +71,6 @@ export class ZezoOTT {
     this.config = new ConfigService(options);
     this.upgrade = new UpgradeService(options);
     this.releasePopup = new ReleasePopupService(options);
+    this.tvodService = new TvodService(options);
   }
 }

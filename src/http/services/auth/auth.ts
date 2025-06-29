@@ -1,3 +1,177 @@
+// import { AxiosRequestConfig, AxiosResponse } from "axios";
+// import { IOptions } from "../../api-sdk";
+// import BaseService from "../baseService";
+// import {
+//   IChangePasswordPayload,
+//   IForgotPasswordPayload,
+//   ILoginPayload,
+//   IRemoveSessionPayload,
+//   IResetPasswordPayload,
+//   ISendOTPPayload,
+//   ISendOTPResponse,
+//   ISignUpPayload,
+//   IVerifyOtpPayload,
+//   IWhoami,
+// } from "./auth.types";
+
+// type ProviderType = "email" | "phone";
+// type ILoginWithProvider = ILoginPayload & { provider: ProviderType };
+
+// class AuthService extends BaseService {
+//   constructor(options: IOptions) {
+//     super(options);
+//   }
+
+//   /**
+//    * Send OTP to the user's phone
+//    */
+//   async sendOTP(
+//     payload: ISendOTPPayload,
+//     config?: AxiosRequestConfig
+//   ): Promise<AxiosResponse<ISendOTPResponse>> {
+//     return this.request({
+//       method: "POST",
+//       url: "/auth/login?provider=phone",
+//       data: payload,
+//       ...config,
+//     });
+//   }
+
+//   /**
+//    * Logins the user with the given email or phone and password
+//    */
+//   async login(
+//     payload: ILoginWithProvider,
+//     config?: AxiosRequestConfig
+//   ): Promise<AxiosResponse<any>> {
+//     return this.request({
+//       method: "POST",
+//       url: `/auth/login?provider=${payload.provider}`,
+//       data: payload,
+//       ...config,
+//     });
+//   }
+
+//   /**
+//    * Verify the OTP sent to the user
+//    */
+//   async verifyOTP(
+//     payload: IVerifyOtpPayload,
+//     config?: AxiosRequestConfig
+//   ): Promise<AxiosResponse<any>> {
+//     return this.request({
+//       method: "POST",
+//       url: "/auth/verify-otp",
+//       data: payload,
+//       ...config,
+//     });
+//   }
+
+//   /**
+//    * Sign up a user
+//    */
+//   async signUp(
+//     payload: ISignUpPayload,
+//     config?: AxiosRequestConfig
+//   ): Promise<AxiosResponse<any>> {
+//     return this.request({
+//       method: "POST",
+//       url: "/auth/register",
+//       data: payload,
+//       ...config,
+//     });
+//   }
+
+//   /**
+//    * Forgot password
+//    */
+//   async forgotPassword(
+//     payload: IForgotPasswordPayload,
+//     config?: AxiosRequestConfig
+//   ): Promise<AxiosResponse<any>> {
+//     return this.request({
+//       method: "POST",
+//       url: "/auth/forgot-password",
+//       data: payload,
+//       ...config,
+//     });
+//   }
+
+//   /**
+//    * Reset the user's password
+//    */
+//   async resetPassword(
+//     payload: IResetPasswordPayload,
+//     config?: AxiosRequestConfig
+//   ): Promise<AxiosResponse<any>> {
+//     return this.request({
+//       method: "POST",
+//       url: `/auth/reset-password/${payload.id}`,
+//       data: {
+//         token: payload.token,
+//         password: payload.password,
+//       },
+//       ...config,
+//     });
+//   }
+
+//   /**
+//    * Retrieves the authenticated user's information.
+//    */
+//   async whoamI(
+//     config?: AxiosRequestConfig
+//   ): Promise<AxiosResponse<{ data: IWhoami }>> {
+//     return this.request({
+//       method: "GET",
+//       url: "/auth/whoami",
+//       ...config,
+//     });
+//   }
+
+//   /**
+//    * Logs out the user
+//    */
+//   async logout(config?: AxiosRequestConfig): Promise<AxiosResponse<any>> {
+//     return this.request({
+//       method: "POST",
+//       url: "/auth/logout",
+//       ...config,
+//     });
+//   }
+
+//   /**
+//    * Removes a user session
+//    */
+//   async removeSession(
+//     payload: IRemoveSessionPayload,
+//     config?: AxiosRequestConfig
+//   ): Promise<AxiosResponse<any>> {
+//     return this.request({
+//       method: "PATCH",
+//       url: "/auth/self/remove-session",
+//       data: payload,
+//       ...config,
+//     });
+//   }
+
+//   /**
+//    * Changes the user's password
+//    */
+//   async changePassword(
+//     payload: IChangePasswordPayload,
+//     config?: AxiosRequestConfig
+//   ): Promise<AxiosResponse<any>> {
+//     return this.request({
+//       method: "PATCH",
+//       url: "/auth/self/change-password",
+//       data: payload,
+//       ...config,
+//     });
+//   }
+// }
+
+// export default AuthService;
+
 import { AxiosResponse } from "axios";
 import { IOptions } from "../../api-sdk";
 import BaseService from "../baseService";
@@ -133,11 +307,15 @@ class AuthService extends BaseService {
    * @returns Response from the server indicating the result of the session removal.
    */
 
-  async removeSession(payload: IRemoveSessionPayload) {
+  async removeSession(
+    payload: IRemoveSessionPayload,
+    headers?: Record<string, string>
+  ) {
     return this.request({
       method: "PATCH",
       url: "/auth/self/remove-session",
       data: payload,
+      headers,
     });
   }
 
