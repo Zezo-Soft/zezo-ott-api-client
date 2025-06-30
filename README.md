@@ -108,6 +108,7 @@ main();
 
 1. [Payments](doc/payments.md#Payments)
 
+   1. [list](doc/payments.md#list)
    1. [checkout](doc/payments.md#checkout)
    1. [ready](doc/payments.md#ready)
 

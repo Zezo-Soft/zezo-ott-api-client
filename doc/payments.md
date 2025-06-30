@@ -1,5 +1,16 @@
 # Payments
 
+## list
+
+```javascript
+try {
+  const response = await zott.payments.list();
+  console.log(response);
+} catch (error) {
+  console.log(error);
+}
+```
+
 ## checkout
 
 ```javascript

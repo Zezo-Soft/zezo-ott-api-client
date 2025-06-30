@@ -1,10 +1,34 @@
+import { AxiosResponse } from "axios";
+import { IPaginatedResponse } from "../../../types";
+import { filterNonNull } from "../../../utils";
 import { IOptions } from "../../api-sdk";
 import BaseService from "../baseService";
-import { ICheckout, IPlatform } from "./payments.types";
+import {
+  ICheckout,
+  IPayment,
+  IPaymentsQuery,
+  IPlatform,
+} from "./payments.types";
+import qs from "qs";
 
 class PaymentService extends BaseService {
   constructor(options: IOptions) {
     super(options);
+  }
+
+  /**
+   * Lists payments.
+   *
+   * @param query The query to filter the results by.
+   * @returns A promise that resolves to the server's response containing the list of payments.
+   */
+  async list<T = IPayment>(
+    query?: IPaymentsQuery
+  ): Promise<AxiosResponse<IPaginatedResponse<T>>> {
+    return this.request({
+      method: "GET",
+      url: `/api/v1/payments?${qs.stringify(filterNonNull(query || {}))}`,
+    });
   }
 
   /**
@@ -13,7 +37,7 @@ class PaymentService extends BaseService {
    * @param payload the checkout payload
    * @returns response from the server
    */
-  async checkout(payload: ICheckout) {
+  async checkout(payload: ICheckout): Promise<AxiosResponse> {
     return this.request({
       method: "POST",
       url: "/api/v1/payments/checkout",
@@ -26,7 +50,7 @@ class PaymentService extends BaseService {
    * @param payload the platform to check
    * @returns response from the server
    */
-  async ready(payload: IPlatform) {
+  async ready(payload: IPlatform): Promise<AxiosResponse> {
     return this.request({
       method: "GET",
       url: "/api/v1/payments/ready",
