@@ -1,12 +1,14 @@
-# Categories
+# Reels
 
 ## create
 
 ```javascript
 try {
-  const response = await zott.categories.create({
-    name: "test",
+  const response = await zott.reels.create({
+    name: "test reel",
     description: "test description",
+    tags: ["tag1", "tag2"],
+    thumbnail: File,
   });
   console.log(response);
 } catch (error) {
@@ -18,9 +20,26 @@ try {
 
 ```javascript
 try {
-  const response = await zott.categories.update("categoryId123", {
-    name: "test",
+  const response = await zott.reels.update("reelId123", {
+    name: "test reel",
     description: "test description",
+    tags: ["tag1", "tag2"],
+    thumbnail: File,
+    content: "content",
+  });
+  console.log(response);
+} catch (error) {
+  console.log(error);
+}
+```
+
+## actions
+
+```javascript
+try {
+  const response = await zott.reels.actions({
+    action: "active", // "active" | "inactive" | "trash" | "pending" | "blocked"
+    ids: ["reelId123", "reelId456"],
   });
   console.log(response);
 } catch (error) {
@@ -32,35 +51,7 @@ try {
 
 ```javascript
 try {
-  const response = await zott.categories.delete([
-    "categoryId123",
-    "categoryId456",
-  ]);
-  console.log(response);
-} catch (error) {
-  console.log(error);
-}
-```
-
-## actions
-
-```javascript
-try {
-  const response = await zott.categories.actions({
-    ids: ["categoryId123", "categoryId456"],
-    action: "public",
-  });
-  console.log(response);
-} catch (error) {
-  console.log(error);
-}
-```
-
-## getManage
-
-```javascript
-try {
-  const response = await zott.categories.getManage();
+  const response = await zott.reels.delete(["reelId123"]);
   console.log(response);
 } catch (error) {
   console.log(error);
@@ -71,18 +62,18 @@ try {
 
 ```javascript
 try {
-  const response = await zott.categories.list();
+  const response = await zott.reels.list();
   console.log(response);
 } catch (error) {
   console.log(error);
 }
 ```
 
-## get
+## feed
 
 ```javascript
 try {
-  const response = await zott.categories.get();
+  const response = await zott.reels.feed();
   console.log(response);
 } catch (error) {
   console.log(error);
