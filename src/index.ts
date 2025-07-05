@@ -22,3 +22,4 @@ export * from "./http/services/history/history.types";
 export * from "./http/services/reels/reels.types";
 export * from "./http/services/upload/upload.types";
 export * from "./http/services/genres/genres.types";
+export * from "./http/services/language/language.types";

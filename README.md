@@ -226,6 +226,15 @@ main();
    1. [listManage](doc/genres.md#listManage)
    1. [list](doc/genres.md#list)
 
+1. [Language](doc/language.md#Language)
+
+   1. [create](doc/language.md#create)
+   1. [update](doc/language.md#update)
+   1. [delete](doc/language.md#delete)
+   1. [actions](doc/language.md#actions)
+   1. [listManage](doc/language.md#listManage)
+   1. [list](doc/language.md#list)
+
 ## Contributors
 
 <a href="https://github.com/PukhrajDhamu" target="_blank">
