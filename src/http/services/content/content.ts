@@ -388,6 +388,20 @@ class ContentService extends BaseService {
   }
 
   /**
+   * Fetches search results based on the given query string.
+   *
+   * @param query The search query to be used for finding matching content.
+   * @returns A promise that resolves to an array of matching content items.
+   */
+  async fetchSearchResults(query: string): Promise<AxiosResponse<IContent[]>> {
+    return this.request({
+      method: "GET",
+      url: "/api/search",
+      params: { query },
+    });
+  }
+
+  /**
    * Deletes an image for a given content.
    *
    * @param payload The data to send to the server for deleting an image.

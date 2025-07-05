@@ -133,14 +133,17 @@ class AuthService extends BaseService {
    * @returns Response from the server indicating the result of the session removal.
    */
 
-  async removeSession(payload: IRemoveSessionPayload) {
+  async removeSession(
+    payload: IRemoveSessionPayload,
+    headers?: Record<string, string>
+  ) {
     return this.request({
       method: "PATCH",
       url: "/auth/self/remove-session",
       data: payload,
+      headers,
     });
   }
-
   /**
    * Changes the user's password.
    * @param payload - An object containing the current password and the new password.
