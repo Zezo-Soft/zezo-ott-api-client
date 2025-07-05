@@ -13,9 +13,20 @@ export interface IRemoveFromFavorites {
 }
 
 export interface IFavoriteContentItem {
-  id: string;
+  _id: string;
   content: IContentData;
-  title: string;
-  thumbnail: string;
-  type: "movie" | "series";
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+export interface IFavoritesResponse {
+  data: IFavoriteContentItem[];
+  meta: {
+    pagination: {
+      page: number;
+      pageSize: number;
+      pageCount: number;
+      total: number;
+    };
+  };
 }

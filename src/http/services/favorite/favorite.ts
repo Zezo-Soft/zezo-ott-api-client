@@ -6,6 +6,7 @@ import {
   IIsFavorite,
   IRemoveFromFavorites,
   IFavoriteContentItem,
+  IFavoritesResponse,
 } from "./favorite.types";
 
 class FavoriteService extends BaseService {
@@ -54,7 +55,7 @@ class FavoriteService extends BaseService {
    * Get all favorite contents for the logged-in user.
    * @returns List of user's favorite content items
    */
-  async get(): Promise<AxiosResponse<IFavoriteContentItem[]>> {
+  async get(): Promise<AxiosResponse<IFavoritesResponse>> {
     return this.request({
       method: "GET",
       url: "/api/favorite",
