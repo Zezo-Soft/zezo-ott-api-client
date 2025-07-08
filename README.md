@@ -235,6 +235,15 @@ main();
    1. [listManage](doc/language.md#listManage)
    1. [list](doc/language.md#list)
 
+1. [Cast](doc/cast.md#Cast)
+
+   1. [create](doc/cast.md#create)
+   1. [update](doc/cast.md#update)
+   1. [delete](doc/cast.md#delete)
+   1. [actions](doc/cast.md#actions)
+   1. [listManage](doc/cast.md#listManage)
+   1. [list](doc/cast.md#list)
+
 ## Contributors
 
 <a href="https://github.com/PukhrajDhamu" target="_blank">

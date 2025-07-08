@@ -1,12 +1,13 @@
-# Language
+# Cast
 
 ## create
 
 ```javascript
 try {
-  const response = await zott.language.create({
-    name: "Hindi",
-    description: "Hindi Language",
+  const response = await zott.cast.create({
+    name: "Name",
+    description: "Description",
+    type: "actor",
   });
   console.log(response);
 } catch (error) {
@@ -18,9 +19,10 @@ try {
 
 ```javascript
 try {
-  const response = await zott.language.update("Id123", {
-    name: "Hindi",
-    description: "Hindi Language",
+  const response = await zott.cast.update("Id123", {
+    name: "Name",
+    description: "Description",
+    type: "actor",
   });
   console.log(response);
 } catch (error) {
@@ -32,7 +34,7 @@ try {
 
 ```javascript
 try {
-  const response = await zott.language.delete(["Id123", "Id456"]);
+  const response = await zott.cast.delete(["Id123", "Id456"]);
   console.log(response);
 } catch (error) {
   console.log(error);
@@ -43,7 +45,7 @@ try {
 
 ```javascript
 try {
-  const response = await zott.language.actions({
+  const response = await zott.cast.actions({
     ids: ["Id123", "Id456"],
     action: "public",
   });
@@ -57,7 +59,7 @@ try {
 
 ```javascript
 try {
-  const response = await zott.language.getManage();
+  const response = await zott.cast.getManage();
   console.log(response);
 } catch (error) {
   console.log(error);
@@ -68,7 +70,7 @@ try {
 
 ```javascript
 try {
-  const response = await zott.language.list();
+  const response = await zott.cast.list();
   console.log(response);
 } catch (error) {
   console.log(error);

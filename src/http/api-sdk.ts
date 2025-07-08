@@ -22,6 +22,7 @@ import ReelsService from "./services/reels/reels";
 import UploadService from "./services/upload/upload";
 import GenresService from "./services/genres/genres";
 import LanguageService from "./services/language/language";
+import CastService from "./services/cast/cast";
 
 export interface IOptions {
   baseUrl: string;
@@ -60,6 +61,7 @@ export class ZezoOTT {
   upload: UploadService;
   genres: GenresService;
   language: LanguageService;
+  cast: CastService;
 
   /**
    * Constructor for ZezoOTT class.
@@ -90,5 +92,6 @@ export class ZezoOTT {
     this.upload = new UploadService(options);
     this.genres = new GenresService(options);
     this.language = new LanguageService(options);
+    this.cast = new CastService(options);
   }
 }
