@@ -1,10 +1,10 @@
-# Categories
+# Genres
 
 ## create
 
 ```javascript
 try {
-  const response = await zott.categories.create({
+  const response = await zott.genres.create({
     name: "test",
     description: "test description",
   });
@@ -18,7 +18,7 @@ try {
 
 ```javascript
 try {
-  const response = await zott.categories.update("categoryId123", {
+  const response = await zott.genres.update({
     name: "test",
     description: "test description",
   });
@@ -32,10 +32,7 @@ try {
 
 ```javascript
 try {
-  const response = await zott.categories.delete([
-    "categoryId123",
-    "categoryId456",
-  ]);
+  const response = await zott.genres.delete(["id1", "id2"]);
   console.log(response);
 } catch (error) {
   console.log(error);
@@ -46,8 +43,8 @@ try {
 
 ```javascript
 try {
-  const response = await zott.categories.actions({
-    ids: ["categoryId123", "categoryId456"],
+  const response = await zott.genres.actions({
+    ids: ["id1", "id2"],
     action: "public",
   });
   console.log(response);
@@ -56,11 +53,11 @@ try {
 }
 ```
 
-## getManage
+## listManage
 
 ```javascript
 try {
-  const response = await zott.categories.getManage();
+  const response = await zott.genres.listManage();
   console.log(response);
 } catch (error) {
   console.log(error);
@@ -71,18 +68,7 @@ try {
 
 ```javascript
 try {
-  const response = await zott.categories.list();
-  console.log(response);
-} catch (error) {
-  console.log(error);
-}
-```
-
-## get
-
-```javascript
-try {
-  const response = await zott.categories.get();
+  const response = await zott.genres.list();
   console.log(response);
 } catch (error) {
   console.log(error);

@@ -18,6 +18,11 @@ import ReleasePopupService from "./services/release.popup/release.popup";
 import ApiKeyService from "./services/api.key/api.key";
 import FileManagerService from "./services/file.manager/file.manager";
 import HistoryService from "./services/history/history";
+import ReelsService from "./services/reels/reels";
+import UploadService from "./services/upload/upload";
+import GenresService from "./services/genres/genres";
+import LanguageService from "./services/language/language";
+import CastService from "./services/cast/cast";
 
 export interface IOptions {
   baseUrl: string;
@@ -52,6 +57,11 @@ export class ZezoOTT {
   apiKeys: ApiKeyService;
   fileManager: FileManagerService;
   history: HistoryService;
+  reels: ReelsService;
+  upload: UploadService;
+  genres: GenresService;
+  language: LanguageService;
+  cast: CastService;
 
   /**
    * Constructor for ZezoOTT class.
@@ -78,5 +88,10 @@ export class ZezoOTT {
     this.apiKeys = new ApiKeyService(options);
     this.fileManager = new FileManagerService(options);
     this.history = new HistoryService(options);
+    this.reels = new ReelsService(options);
+    this.upload = new UploadService(options);
+    this.genres = new GenresService(options);
+    this.language = new LanguageService(options);
+    this.cast = new CastService(options);
   }
 }

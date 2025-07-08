@@ -75,6 +75,12 @@ main();
 
 1. [Categories](doc/categories.md#Categories)
 
+   1. [create](doc/categories.md#create)
+   1. [update](doc/categories.md#update)
+   1. [delete](doc/categories.md#delete)
+   1. [actions](doc/categories.md#actions)
+   1. [getManage](doc/categories.md#getManage)
+   1. [list](doc/categories.md#list)
    1. [get](doc/categories.md#get)
 
 1. [Contents](doc/content.md#Contents)
@@ -195,6 +201,48 @@ main();
 
    1. [get](doc/history.md#get)
    1. [update](doc/history.md#update)
+
+1. [Reels](doc/reels.md#Reels)
+
+   1. [create](doc/reels.md#create)
+   1. [update](doc/reels.md#update)
+   1. [actions](doc/reels.md#actions)
+   1. [delete](doc/reels.md#delete)
+   1. [list](doc/reels.md#list)
+   1. [feed](doc/reels.md#feed)
+
+1. [Upload](doc/upload.md#Upload)
+
+   1. [init](doc/upload.md#init)
+   1. [getUrls](doc/upload.md#getUrls)
+   1. [finalize](doc/upload.md#finalize)
+
+1. [Genres](doc/genres.md#Genres)
+
+   1. [create](doc/genres.md#create)
+   1. [update](doc/genres.md#update)
+   1. [delete](doc/genres.md#delete)
+   1. [actions](doc/genres.md#actions)
+   1. [listManage](doc/genres.md#listManage)
+   1. [list](doc/genres.md#list)
+
+1. [Language](doc/language.md#Language)
+
+   1. [create](doc/language.md#create)
+   1. [update](doc/language.md#update)
+   1. [delete](doc/language.md#delete)
+   1. [actions](doc/language.md#actions)
+   1. [listManage](doc/language.md#listManage)
+   1. [list](doc/language.md#list)
+
+1. [Cast](doc/cast.md#Cast)
+
+   1. [create](doc/cast.md#create)
+   1. [update](doc/cast.md#update)
+   1. [delete](doc/cast.md#delete)
+   1. [actions](doc/cast.md#actions)
+   1. [listManage](doc/cast.md#listManage)
+   1. [list](doc/cast.md#list)
 
 ## Contributors
 
