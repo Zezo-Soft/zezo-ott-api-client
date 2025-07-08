@@ -304,3 +304,15 @@ try {
   console.log(error);
 }
 ```
+
+## fetchSearchResults
+
+```javascript
+try {
+  const query = "avengers";
+  const response = await zott.contents.fetchSearchResults(query);
+  console.log("Search Results:", response.data);
+} catch (error) {
+  console.log(error);
+}
+```

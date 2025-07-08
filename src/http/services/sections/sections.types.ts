@@ -35,7 +35,6 @@ export interface ISectionData {
     };
   };
 }
-
 export interface ISection {
   data: ISectionData[];
   meta: {

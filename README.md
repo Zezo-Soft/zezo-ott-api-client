@@ -105,12 +105,14 @@ main();
    1. [getIsContentBuyedOrRented](doc/content.md#getIsContentBuyedOrRented)
    1. [getTvod](doc/content.md#getTvod)
    1. [updateGeoLocation](doc/content.md#updateGeoLocation)
+   1. [fetchSearchResults](doc/content.md#fetchsearchresults)
 
 1. [Favorite](doc/favorite.md#Favorites)
 
    1. [addToFavorites](doc/favorite.md#addToFavorites)
    1. [getIsFavorite](doc/favorite.md#getIsFavorite)
    1. [removeFromFavorites](doc/favorite.md#removeFromFavorites)
+   1. [get](doc/favorite.md#getfavorites)
 
 1. [Payments](doc/payments.md#Payments)
 

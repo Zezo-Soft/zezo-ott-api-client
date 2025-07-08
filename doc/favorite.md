@@ -41,3 +41,14 @@ try {
   console.log(error);
 }
 ```
+
+## getFavorites
+
+```javascript
+try {
+  const response = await zott.favorites.get();
+  console.log("Favorite Items:", response.data);
+} catch (error) {
+  console.log("Error fetching favorites:", error);
+}
+```

@@ -20,10 +20,18 @@ export interface ISubtitles {
   url: string;
 }
 
+export interface IContent {
+  id: string;
+  title: string;
+  posterUrl: string;
+  type: "movie" | "series" | "music";
+}
+
 export interface IContentEpisodes {
   _id: string;
   name: string;
   description: string;
+  data: string;
   duration: number;
   number: number;
   source_link: string;
@@ -56,6 +64,9 @@ export interface IContentSeasons {
   created_by: string;
   createdAt: string;
   updatedAt: string;
+  images?: IContentImages[] | null;
+  title_image?: string | null;
+  description?: string | null;
 }
 
 export interface IContentCategory {

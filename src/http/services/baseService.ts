@@ -11,9 +11,6 @@ class BaseService {
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
-        // "x-platform": "web",
-        // "x-country-code": "IN",
-        // "x-language": "en",
         ...(options.headers || {}),
       },
     });
