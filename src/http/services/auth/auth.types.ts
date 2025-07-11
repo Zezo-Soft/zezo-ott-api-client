@@ -1,12 +1,8 @@
-/**
- * @author Naresh Desai
- * @lastModified Wed 08 May 2024 at 03:03 PM
- */
-
 export interface ISendOTPPayload {
   phone: string;
   countryCode?: string;
   re_captcha_token?: string;
+  provider?: "whatsapp";
 }
 
 export interface ISendOTPResponse {
