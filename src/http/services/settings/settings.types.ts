@@ -91,15 +91,40 @@ export interface IWebSetting {
   google_teg_manager: string;
   social_links: any[];
   copy_right_text: string;
-  credentials: string;
   new_release_poster: string;
   webSettings: IWebSettings;
-  smtp_server?: ISMTPServerSettings;
-  transcoder?: ITranscoderSettings[];
-  payment_gateways?: IPaymentGatewaySettings[];
 }
 
 export interface IWebsiteSetting {
   message: string;
   data: IWebSetting;
+}
+
+export interface IGetManageSettingsQuery {
+  select?: string;
+}
+
+export interface IUpdateSettings {
+  id: string;
+  name?: string;
+  description?: string;
+  siteUrl?: string;
+  seo_title?: string;
+  meta_description?: string;
+  meta_keywords?: string[];
+  google_teg_manager?: string;
+  copy_right_text?: string;
+
+  logo?: File; // File
+  favicon?: File; // File
+}
+
+export interface IUpdateSocialMedia {
+  settings_id: string;
+  action: "create" | "update" | "delete";
+  id?: string;
+  name?: string;
+  link?: string;
+
+  icon?: string; // File
 }

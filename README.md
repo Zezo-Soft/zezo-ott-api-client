@@ -106,6 +106,9 @@ main();
    1. [getTvod](doc/content.md#getTvod)
    1. [updateGeoLocation](doc/content.md#updateGeoLocation)
    1. [fetchSearchResults](doc/content.md#fetchsearchresults)
+   1. [createImageSize](doc/content.md#createImageSize)
+   1. [listImageSizes](doc/content.md#listImageSizes)
+   1. [deleteImageSize](doc/content.md#deleteImageSize)
 
 1. [Favorite](doc/favorite.md#Favorites)
 
@@ -122,11 +125,19 @@ main();
 
 1. [Settings](doc/settings.md#Settings)
 
+   1. [getManage](doc/settings.md#getManage)
+   1. [get](doc/settings.md#get)
+   1. [update](doc/settings.md#update)
+   1. [updateSocialMedia](doc/settings.md#updateSocialMedia)
    1. [getSettings](doc/settings.md#getSettings)
 
 1. [Subscriptions](doc/subscriptions.md#Subscriptions)
 
+   1. [initNew](doc/subscriptions.md#initNew)
+   1. [delete](doc/subscriptions.md#delete)
+   1. [update](doc/subscriptions.md#update)
    1. [get](doc/subscriptions.md#get)
+   1. [getManage](doc/subscriptions.md#getManage)
 
 1. [Sections](doc/sections.md#Sections)
 
@@ -245,6 +256,17 @@ main();
    1. [actions](doc/cast.md#actions)
    1. [listManage](doc/cast.md#listManage)
    1. [list](doc/cast.md#list)
+
+1. [Transcoding](doc/transcoding.md#Transcoding)
+
+   1. [create](doc/transcoding.md#create)
+   1. [list](doc/transcoding.md#list)
+   1. [delete](doc/transcoding.md#delete)
+
+1. [Notification](doc/notification.md#Notification)
+
+   1. [registerDevice](doc/notification.md#registerDevice)
+   1. [sendPushNotification](doc/notification.md#sendPushNotification)
 
 ## Contributors
 

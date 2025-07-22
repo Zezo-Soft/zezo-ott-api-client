@@ -7,6 +7,7 @@ export interface IGetManageCategories {
   description?: string;
   icon?: string;
   image?: string;
+  q?: string;
   show_in_menu: boolean;
   order: number;
   status: boolean;

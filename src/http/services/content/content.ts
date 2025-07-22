@@ -12,9 +12,11 @@ import {
   ICreateContentResponse,
   ICreateContentSeasonPayload,
   ICreateContentSeasonResponse,
+  ICreateImageSize,
   IDeleteContentImage,
   IGetManageContentQueryPayload,
   IGetSeasonManageQueryPayload,
+  IImageSize,
   ITvod,
   IUpdateContentEpisodePayload,
   IUpdateContentGeoPayload,
@@ -414,6 +416,49 @@ class ContentService extends BaseService {
       method: "DELETE",
       url: "/api/v1/content/images/delete",
       data: payload,
+    });
+  }
+
+  /**
+   * Creates a new image size.
+   *
+   * @param payload The image size data to send to the server. The payload should include the `name`, `width`, and `height` of the image size.
+   * @returns A promise that resolves to the server's response containing a message indicating the result of the operation.
+   */
+  async createImageSize(
+    payload: ICreateImageSize
+  ): Promise<AxiosResponse<{ message: string }>> {
+    return this.request({
+      method: "POST",
+      url: "/api/v1/content/images/field/create",
+      data: payload,
+    });
+  }
+
+  /**
+   * Retrieves a list of all image sizes.
+   *
+   * @returns A promise that resolves to the server's response containing a list of image sizes.
+   */
+  async listImageSizes(): Promise<AxiosResponse<IImageSize[]>> {
+    return this.request({
+      method: "GET",
+      url: "/api/v1/content/images/fields",
+    });
+  }
+
+  /**
+   * Deletes an image size by its ID.
+   *
+   * @param id The ID of the image size to delete.
+   * @returns A promise that resolves to the server's response containing a message indicating the result of the operation.
+   */
+  async deleteImageSize(
+    id: string
+  ): Promise<AxiosResponse<{ message: string }>> {
+    return this.request({
+      method: "DELETE",
+      url: `/api/v1/content/images/fields/${id}`,
     });
   }
 }
