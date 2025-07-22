@@ -316,3 +316,41 @@ try {
   console.log(error);
 }
 ```
+
+## createImageSize
+
+```javascript
+try {
+  const payload = {
+    name: "string",
+    width: 1080,
+    height: 720,
+  };
+  const response = await zott.contents.createImageSize(payload);
+  console.log(response);
+} catch (error) {
+  console.log(error);
+}
+```
+
+## listImageSizes
+
+```javascript
+try {
+  const response = await zott.contents.listImageSizes();
+  console.log(response);
+} catch (error) {
+  console.log(error);
+}
+```
+
+## deleteImageSize
+
+```javascript
+try {
+  const response = await zott.contents.deleteImageSize("imageSizeId");
+  console.log(response);
+} catch (error) {
+  console.log(error);
+}
+```

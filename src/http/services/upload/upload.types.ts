@@ -1,5 +1,7 @@
 export interface IInitUpload {
   Key: string;
+  StoreIn?: "ASSETS" | "OTT";
+  ACL?: "public-read" | "private";
 }
 
 export interface IInitResponse {
@@ -15,6 +17,7 @@ export interface IUploadGetUrls {
   part_number?: number;
   all_parts_uploaded?: boolean;
   bucket?: string;
+  StoreIn?: "ASSETS" | "OTT";
 }
 
 export interface IUploadGetUrlsResponse {
@@ -33,9 +36,11 @@ export interface IUploadFinalize {
   payload?: {
     name: string;
   };
+  StoreIn?: "ASSETS" | "OTT";
 }
 
 export interface IFinalizeResponse {
   id: string;
   type: string;
+  url?: string;
 }

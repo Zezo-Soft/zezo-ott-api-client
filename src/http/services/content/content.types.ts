@@ -397,3 +397,18 @@ export interface IDeleteContentImage {
   content_id: string;
   image_id: string;
 }
+
+export interface ICreateImageSize {
+  name: string;
+  width: number;
+  height: number;
+}
+
+export interface IImageSize {
+  _id: string;
+  name: string;
+  width: number;
+  height: number;
+  createdAt: Date;
+  updatedAt: Date;
+}

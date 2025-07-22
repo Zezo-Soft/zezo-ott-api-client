@@ -23,6 +23,8 @@ import UploadService from "./services/upload/upload";
 import GenresService from "./services/genres/genres";
 import LanguageService from "./services/language/language";
 import CastService from "./services/cast/cast";
+import TranscodingService from "./services/transcoding/transcoding";
+import NotificationsService from "./services/notifications/notifications";
 
 export interface IOptions {
   baseUrl: string;
@@ -62,6 +64,8 @@ export class ZezoOTT {
   genres: GenresService;
   language: LanguageService;
   cast: CastService;
+  transcoding: TranscodingService;
+  notifications: NotificationsService;
 
   /**
    * Constructor for ZezoOTT class.
@@ -93,5 +97,7 @@ export class ZezoOTT {
     this.genres = new GenresService(options);
     this.language = new LanguageService(options);
     this.cast = new CastService(options);
+    this.transcoding = new TranscodingService(options);
+    this.notifications = new NotificationsService(options);
   }
 }
