@@ -25,6 +25,7 @@ import LanguageService from "./services/language/language";
 import CastService from "./services/cast/cast";
 import TranscodingService from "./services/transcoding/transcoding";
 import NotificationsService from "./services/notifications/notifications";
+import AppSettingsService from "./services/app.settings/app.settings";
 
 export interface IOptions {
   baseUrl: string;
@@ -66,6 +67,7 @@ export class ZezoOTT {
   cast: CastService;
   transcoding: TranscodingService;
   notifications: NotificationsService;
+  appSettings: AppSettingsService;
 
   /**
    * Constructor for ZezoOTT class.
@@ -99,5 +101,6 @@ export class ZezoOTT {
     this.cast = new CastService(options);
     this.transcoding = new TranscodingService(options);
     this.notifications = new NotificationsService(options);
+    this.appSettings = new AppSettingsService(options);
   }
 }

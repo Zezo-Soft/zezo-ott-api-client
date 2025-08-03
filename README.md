@@ -268,6 +268,18 @@ main();
    1. [registerDevice](doc/notification.md#registerDevice)
    1. [sendPushNotification](doc/notification.md#sendPushNotification)
 
+1. [App Settings](doc/app.settings.md#AppSettings)
+
+   1. [update](doc/app.settings.md#update)
+   1. [getAndroidVersion](doc/app.settings.md#getAndroidVersion)
+   1. [getPagesList](doc/app.settings.md#getPagesList)
+   1. [updatePages](doc/app.settings.md#updatePages)
+   1. [getSettings](doc/app.settings.md#getSettings)
+   1. [updateTheme](doc/app.settings.md#updateTheme)
+   1. [initTheme](doc/app.settings.md#initTheme)
+   1. [getThemeManage](doc/app.settings.md#getThemeManage)
+   1. [getThemes](doc/app.settings.md#getThemes)
+
 ## Contributors
 
 <a href="https://github.com/PukhrajDhamu" target="_blank">
