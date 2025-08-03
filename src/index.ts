@@ -26,3 +26,4 @@ export * from "./http/services/language/language.types";
 export * from "./http/services/cast/cast.types";
 export * from "./http/services/transcoding/transcoding.types";
 export * from "./http/services/notifications/notifications.types";
+export * from "./http/services/app.settings/app.settings.types";
