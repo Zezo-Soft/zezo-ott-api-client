@@ -45,6 +45,8 @@ export interface isPremium {
   inAppPurchaseProductId?: string | null;
   inAppPurchaseReceipt?: string | null;
   validTill?: Date | null;
+  productAlias?: string | null;
+  price?: number | null;
 }
 
 export interface IUserLocation {
